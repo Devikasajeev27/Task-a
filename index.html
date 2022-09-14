@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | E-commerce product page </title>
+    <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png">
+    
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <!-- custom  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="vh-100"> 
+
+<!-- Navigation Started -->
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container p-2 d-flex border-bottom border-3  mx-5  position-relative"  >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.svg" width="100" height="24">
+      </a>
+      <div class="collapse navbar-collapse navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="#">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+
+        </ul>
+      
+      <div class=" d-flex flex-row  position-absolute end-0">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class=" btn btn-transpatent nav-link " data-bs-toggle="modal" data-bs-target="#exampleModal" href="#"><i  class="fa fa-shopping-cart fs-4"  aria-hidden="true"></i></button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center justify-content-center" style="height: 50vh;">
+                    your cart is empty
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">
+              <img src="img/image-avatar.png"   width="" height="38 "></a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+</nav>
+  <!-- Navigation End -->
+
+
+
+  <!-- image section start -->
+
+  <div class="container mt-3 mb-3">	
+    <div class="card">	
+      <div class="row g-0">	
+        <div class="col-sm-6 ">	
+          <div class="d-flex flex-column justify-content-center d-md-block d-none d-sm-none">
+            <div class="main_image my-5 mb-4" >	
+              <img src="img/image-product-1.jpg"  class="img-fluid rounded-3" id="main_product_image" width="320">	
+            </div>	
+            <div class="thumbnail_images mb-3 px-5 " >	
+              <ul id="thumbnail">	
+                <li class="me-2"><img onclick="changeImage(this)" src="img/image-product-1.jpg" class="rounded-3" width="70"></li>	
+                <li class="mx-2"><img onclick="changeImage(this)" src="img/image-product-2.jpg" class="rounded-3" width="70"></li>	
+                <li class="mx-2"><img onclick="changeImage(this)" src="img/image-product-3.jpg" class="rounded-3" width="70"></li>	
+                <li class="mx-2"><img onclick="changeImage(this)" src="img/image-product-4.jpg" class="rounded-3" width="70"></li>	
+              </ul>	
+            </div>	
+          </div>	
+
+          <div id="carouselExampleControls" class="carousel slide d-sm-block  d-md-none" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/image-product-1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/image-product-2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/image-product-3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/image-product-4.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    <!-- image section end -->
+
+    <!-- content section start -->
+
+        <div class="col-md-6">	
+          <div class="p-3 ms-3">	
+            <div class=" justify-content-between align-items-center mt-5">	
+              <h6 >SNEAKER COMPANY</h6>	
+              <h1 class="pe-5">Fall Limited Edition Sneakers</h1>	
+            </div>
+              	<div class="mt-4 pe-5 content">	
+                  <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                    durable rubber outer sole, they’ll  withstand everything the weather can offer.</p>	
+                </div>	
+                <div class="d-flex">
+                  <div>$125.00 <p style="font-size:12px;text-decoration: line-through; ">$250.00</p> </div>
+                  <div><p class=" text-center mx-3 p-1 border rounded-3 text-center bg-warning fw-bold op">50%</p></div>
+                </div>
+                
+                
+                <div class=" row d-flex flex-row  ">	
+                  <div class="col-md-3 col-sm-12 col-lg-3 col-xl-2 d-flex rounded-3 me-5">
+                    <button class="btn btn-link px-1"
+                       onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                       <i style="color: coral;" class="fa fa-minus"></i>
+                     </button>
+     
+                     <input id="form1" min="0" name="quantity" value="2" type="number"
+                       class="form-control form-control-sm border-0 text-center" />
+     
+                     <button class="btn btn-link px-1"
+                       onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                       <i style="color: coral;" class="fa fa-plus"></i>
+                     </button>
+                   </div> 
+                   <button type="button" class="btn btn-warning  text-white col-md-3 col-sm-3 col-lg-5 col-xl-3 rounded-3 "  >
+                    <i  class="fa fa-shopping-cart text-white "   aria-hidden="true"> </i> 
+                     Add to cart</button>
+                </div>
+              </div>	
+            </div>	
+          </div>	
+        </div> 
+      </div>
+    
+  <!-- content section end -->
+
+
+    <!-- Buddle JavaScript Bootstrap -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+
+<!-- custom javascript -->
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
